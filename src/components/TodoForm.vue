@@ -5,17 +5,23 @@
         export default {
                 data(){
                         return {
-                                content : ''
+                                content : '',
+                                contentError : false
                         }
                 },
                 props :[
                         'state'
                 ],
                 methods : {
-                        saveTodo() {                                                                
-                               this.state.list = [...this.state.list, { id : this.state.list.length+1, content : this.content, finished : false }]
-                               this.content = ''
-                               this.$emit('updateList',this.state.list)
+                        saveTodo() {      
+                                this.contentError = false;
+                                if(this.content.length > 0)  {                                                        
+                                        this.state.list = [...this.state.list, { id : this.state.list.length+1, content : this.content, finished : false }]
+                                        this.content = ''
+                                        this.$emit('updateList',this.state.list)
+                                }else{
+                                        this.contentError = true
+                                }
                         }
                 }
         }
@@ -36,6 +42,9 @@
                                         <textarea v-model="content" type="text" class="inp-title"></textarea>
                                 </div>
                                 <div class="box-btn-todo">
+                                        <div>
+                                                <span class="content-erorr" v-show="contentError">The content field has required.</span>
+                                        </div>
                                         <button class="btn-submit-todo" @click="saveTodo()">
                                                 save
                                         </button>

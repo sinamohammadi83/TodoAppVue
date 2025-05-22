@@ -64,7 +64,8 @@
 }
 .box-btn-todo{
         display: flex;
-        justify-content: end;
+        justify-content: space-between;
+        align-items: center;
 }
 .list-item{
         background-color: white;
@@ -113,4 +114,7 @@
 .content{
         width: 90%;
         word-wrap: break-word;
+}
+.content-erorr{
+        color: red;
 }
