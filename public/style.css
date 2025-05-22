@@ -1,0 +1,116 @@
+*{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+}
+.box-to-do{
+        width: 400px;
+        height: 400px;
+        background-color: rgb(245, 245, 245);
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgb(229, 229, 229);
+        border: 1px solid rgb(205, 205, 205);
+}
+.main{
+        display: flex;
+        justify-content: space-evenly;
+}
+.list{
+        width: 50%;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+}
+.section-todo{
+        display: flex;
+        align-items: center;
+        height: 100vh;
+}
+.header{
+        text-align: center;
+        padding: 20px 0;
+}
+.todo-body{
+        padding: 10px;
+}
+.inp-title{
+        border: 2px solid rgb(224, 224, 224);
+        padding: 10px;
+        width: 100%;
+        outline: none;
+        border-radius: 10px;
+        box-shadow: 0 0 2px rgb(216, 216, 216);
+        height: 250px;
+        resize: none;
+}
+.inp-title:focus{
+        border: 2px solid blue;
+}
+.btn-submit-todo{
+        background-color: blue;
+        color: white;
+        border: 0;
+        border-radius: 5px;
+        padding: 7px 15px;
+        margin-top: 10px;
+        cursor: pointer;
+}
+.label-title{
+        margin-bottom: 10px;
+        margin-left: 5px;
+        display: block;
+}
+.box-btn-todo{
+        display: flex;
+        justify-content: end;
+}
+.list-item{
+        background-color: white;
+        border: 1px solid rgb(193, 193, 193);
+        padding: 10px;
+        border-radius: 10px;
+}
+.list-item:nth-child(even){
+        background-color: rgb(255, 248, 246);
+}
+.btn-trash{
+        background-color: red;
+        border: 0;
+        padding: 4px 5px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgb(231, 231, 231);
+        cursor: pointer;
+}
+.btn-trash svg{
+        width: 20px;
+        color: white;
+}
+.tools-list-item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+}
+.body-item-list{
+        display: flex;
+        /* justify-content: end; */
+        padding: 10px 10px;
+        justify-content: space-between;
+}
+.todo-checkbox{
+        border: 1px solid gray;
+        width: 24px;
+        height: 24px;
+        border-radius: 3px;
+        cursor: pointer;
+        background-color: white;
+}
+.todo-finished{
+        text-decoration: line-through rgb(0, 0, 0);
+}
+.content{
+        width: 90%;
+        word-wrap: break-word;
+}
